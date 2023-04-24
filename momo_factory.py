@@ -1,6 +1,6 @@
 from momo import Momo
 from transfer_money.mtn_transfer import MtnTransfer
-from users import User
+from users.users import User
 
 import os
 import sys

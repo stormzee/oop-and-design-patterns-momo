@@ -1,5 +1,4 @@
 from transfer_money import TransferMoney
-import utils
 from utils import confirm_transaction, get_balance
 
 import os

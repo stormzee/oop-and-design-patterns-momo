@@ -1,5 +1,5 @@
 import unittest
-from users import User
+from users.users import User
 from transfer_money.mtn_transfer import MtnTransfer
 import os
 import sys
