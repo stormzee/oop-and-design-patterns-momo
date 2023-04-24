@@ -1,6 +1,6 @@
 from momo import Momo
 from transfer_money.mtn_transfer import MtnTransfer
-from users import users_profile
+from users import User
 
 import os
 import sys
@@ -14,7 +14,7 @@ class MomoFactory:
     @staticmethod
     def create_mtnTransfer(recipient_number:str, amount:float, reference:str, pin:str):
         transfer = MtnTransfer(recipient_number, amount, reference, pin)
-        user = users_profile.User(username='sa', phone='02255545', pin_code='1233')
+        user = User(username='sa', phone='02255545', pin_code='1233')
         mtntransfer_transaction = Momo(user, transfer)
         return mtntransfer_transaction
     

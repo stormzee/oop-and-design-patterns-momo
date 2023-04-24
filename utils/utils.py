@@ -1,6 +1,6 @@
 #import user class here
 
-from users.users_profile import User
+from users.users import User
 
 def confirm_transaction(transaction_code, transaction_amount) -> str:
     if User.pin_code == transaction_code and User.balance >= transaction_amount:

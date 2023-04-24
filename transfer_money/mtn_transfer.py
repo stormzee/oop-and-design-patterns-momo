@@ -3,10 +3,10 @@ from utils.utils import confirm_transaction, get_balance
 
 class MtnTransfer(TransferMoney):
 
-    def __int__(self, recipient_number:str, amount:float, reference:str, pin:str):
+    def __int__(self, recipient_number:str, amount:float, pin:str):
         self.recipient_number = recipient_number
         self.amount = amount
-        self.reference = reference
+        # self.reference = reference
         self.pin = pin
 
     def do_transaction(self):
