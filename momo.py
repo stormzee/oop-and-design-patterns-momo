@@ -1,14 +1,11 @@
 from abc import ABC
-from transactions import transactions
+from momo_transactions import Transactions
 
-class momo(transactions):
-    balance = 0
-    def __init__(self, phone_number, username, mm_pin):
-        self.phone_number = phone_number
-        self.username = username
-        self.mm_pin = mm_pin
+class Momo(Transactions):
+    def __init__(self, user, transaction_type):
+        self.user = user
+        self.transaction_type = transaction_type
 
-
-    def perform_transaction(self):
-        pass
+    def do_transaction(self):
+        return self.transaction_type.do_transaction()
 
