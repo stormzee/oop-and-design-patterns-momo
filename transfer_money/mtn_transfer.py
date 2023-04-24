@@ -1,6 +1,12 @@
 from transfer_money.transfer_money import TransferMoney
 from utils.utils import confirm_transaction, get_balance
 
+import os
+import sys
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
+
 class MtnTransfer(TransferMoney):
 
     def __int__(self, recipient_number:str, amount:float, pin:str):
