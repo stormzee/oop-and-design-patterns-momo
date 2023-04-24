@@ -1,5 +1,5 @@
 from transfer_money import TransferMoney
-from utils import confirm_transaction, get_balance
+from utils.utils import confirm_transaction
 
 import os
 import sys
