@@ -14,15 +14,15 @@ class TestMoneytransfer(unittest.TestCase):
         # create a user object
         # use user obj to perform a transfer
         
-        user = User('sammy', '0240080134', pin_code='2000')
-        recipient_number='kajskdnals'
-        amount= 200
-        pin= '2000'
-        transfer = MtnTransfer()
+        user = User('sammy', '0240080134', pin_code=2000)
+        recipient_number = 'kajskdnals'
+        amount = 200
+        pin = 2000
+        transfer = MtnTransfer(user.username, user.phone, user.pin_code)
         transfer.recipient_number = recipient_number
         transfer.amount = amount
         transfer.pin = pin
-        self.assertEqual(transfer.do_transaction(), 1800)
+        self.assertEqual(transfer.do_transaction(), 794)
         
 if __name__ == "__main__":
     unittest.main()
