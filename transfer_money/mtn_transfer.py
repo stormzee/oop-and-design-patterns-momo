@@ -8,6 +8,8 @@ from utils.utils import confirm_transaction
 from users import User
 
 class MtnTransfer(TransferMoney, User):
+    
+    # note that the User class inherited takes precedence over this class' variables
 
     def __int__(self, recipient_number, amount, pin):
         self.recipient_number = recipient_number

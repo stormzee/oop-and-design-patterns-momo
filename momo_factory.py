@@ -14,8 +14,7 @@ class MomoFactory:
     @staticmethod
     def create_mtnTransfer(recipient_number:str, amount:float, reference:str, pin:str):
         transfer = MtnTransfer(recipient_number, amount, reference, pin)
-        user = User(username='sa', phone='02255545', pin_code='1233')
-        mtntransfer_transaction = Momo(user, transfer)
+        mtntransfer_transaction = Momo(User, transfer)
         return mtntransfer_transaction
     
     
