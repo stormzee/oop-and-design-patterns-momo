@@ -1,1 +1,1 @@
-from . import mtn_transfer, transfer_money
+from transfer_money import transfer_money

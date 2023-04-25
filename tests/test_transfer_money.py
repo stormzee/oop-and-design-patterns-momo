@@ -1,18 +1,28 @@
-import unittest
-from users.users import User
-from transfer_money.mtn_transfer import MtnTransfer
 import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
+import unittest
+from users.users import User
+from transfer_money.mtn_transfer import MtnTransfer
 
-class transfer_money(unittest.TestCase):
+
+class TestMoneytransfer(unittest.TestCase):
     
     def test_mtnTransfer(self):
         # create a user object
         # use user obj to perform a transfer
         
         user = User('sammy', '0240080134', pin_code='2000')
-        transfer = MtnTransfer(recipient_number='kajskdnals', amount= 200, pin= '2000')
-        self.assertEqual(user.balance, 1800)
+        recipient_number='kajskdnals'
+        amount= 200
+        pin= '2000'
+        transfer = MtnTransfer()
+        transfer.recipient_number = recipient_number
+        transfer.amount = amount
+        transfer.pin = pin
+        self.assertEqual(transfer.do_transaction(), 1800)
+        
+if __name__ == "__main__":
+    unittest.main()
