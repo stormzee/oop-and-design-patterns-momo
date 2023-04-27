@@ -10,6 +10,13 @@ from users import User
 class MtnTransfer(TransferMoney, User):
     
     # note that the User class inherited takes precedence over this class' variables
+    '''
+    MtnTransfer class inherits from the Abstract TransferMoney class and also the
+    User class (whose variables take precedence over the MtnTransfer class since It is not an abstract class)
+    To let the MtnTransfer class' variables take precedence as intended in the code below (but doest work as intended):
+    I think you should make the MtnTransfer class a super class by using the 'super' method
+    '''
+
 
     def __int__(self, recipient_number, amount, pin):
         self.recipient_number = recipient_number
